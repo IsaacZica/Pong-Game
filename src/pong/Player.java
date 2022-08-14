@@ -2,12 +2,13 @@ package pong;
 
 import java.awt.*;
 
-public class Player {
+public class Player extends Rectangle{
 
     public boolean up, down;
     public int x, y;
-    private int width;
-    private int height;
+    public int width;
+    public int height;
+    private int score;
 
     public void tick() {
         if (up) {
@@ -34,5 +35,15 @@ public class Player {
     public void render(Graphics g) {
         g.setColor(Color.BLUE);
         g.fillRect(x , y , width, height);
+        g.setColor(Color.BLUE);
+        g.drawString("Score: "+score, 185,10);
+    }
+
+    public void score() {
+        score++;
+    }
+
+    public int getScore() {
+        return score;
     }
 }

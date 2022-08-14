@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8836a0-6d52-4a09-9555-851fa3184992" name="Changes" comment="Window created">
-      <change afterPath="$PROJECT_DIR$/src/pong/Player.java" afterDir="false" />
+    <list default="true" id="4a8836a0-6d52-4a09-9555-851fa3184992" name="Changes" comment="Created player, added movement and collision">
+      <change afterPath="$PROJECT_DIR$/src/pong/Ball.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pong/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pong/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pong/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660415773000</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created player, added movement and collision">
+      <created>1660423538060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660423538060</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Window created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Window created" />
+    <MESSAGE value="Created player, added movement and collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created player, added movement and collision" />
   </component>
 </project>
