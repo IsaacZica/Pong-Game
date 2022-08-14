@@ -19,17 +19,29 @@ public class Ball extends Rectangle {
             enemy.score();
             ball.x = Game.WIDTH / 2;
             ball.y = Game.HEIGHT / 2;
-            ball.YACELERATION = new Random().nextGaussian(-1,1);
+            ball.YACELERATION = new Random().nextInt(-1,1);
+            ball.XACELERATION = 1;
         } else if (x > Game.WIDTH ) {
             player.score();
             ball.x = Game.WIDTH / 2;
             ball.y = Game.HEIGHT / 2;
-            ball.YACELERATION = new Random().nextGaussian(-1,1);
+            ball.YACELERATION = new Random().nextDouble(-1.25,1.25);
+            ball.XACELERATION = 1;
         }
 
         if (y + height > Game.HEIGHT) {
+            if (YACELERATION > 0 && YACELERATION < 1.25) {
+                YACELERATION += 0.02;
+            } else  if (YACELERATION < 0 && YACELERATION > -1.25) {
+                YACELERATION -= 0.02;
+            }
             YACELERATION *= -1;
         } else if (y < 0) {
+            if (YACELERATION > 0 && YACELERATION < 1.25) {
+                YACELERATION += 0.02;
+            } else  if (YACELERATION < 0 && YACELERATION > -1.25) {
+                YACELERATION -= 0.02;
+            }
             YACELERATION *= -1;
         }
 
@@ -38,15 +50,34 @@ public class Ball extends Rectangle {
         Rectangle boundsPlayer = new Rectangle(player.x, player.y, player.width, player.height);
         Rectangle boundsEnemy = new Rectangle((int) enemy.x,(int) enemy.y, enemy.width, enemy.height);
 
-        System.out.println(bounds.x + " - " + bounds.y + " - " + bounds.height + " - " + bounds.width);
-        System.out.println(x + " - " + y + " - " + height + " - " + width);
+
 
 
         if (bounds.intersects(boundsEnemy)) {
-            System.out.println("colidiu");
+            if (XACELERATION < 5) {
+                XACELERATION += 0.2;
+            }
+            if (YACELERATION == 0) {
+                YACELERATION++;
+            }
+            if (YACELERATION < 0 && YACELERATION > -1.25) {
+                YACELERATION -= 0.02;
+            } else  if (YACELERATION > 0 && YACELERATION < 1.25) {
+                YACELERATION += 0.02;
+            }
             XACELERATION *= -1;
         } else if (bounds.intersects(boundsPlayer)) {
-            System.out.println("colidiu");
+            if (XACELERATION < 0 && XACELERATION > -5) {
+                XACELERATION -= 0.2;
+            }
+            if (YACELERATION == 0) {
+                YACELERATION--;
+            }
+            if (YACELERATION > 0 && YACELERATION < 1.25) {
+                YACELERATION += 0.02;
+            } else  if (YACELERATION < 0 && YACELERATION > -1.25) {
+                YACELERATION -= 0.02;
+            }
             XACELERATION *= -1;
         }
     }

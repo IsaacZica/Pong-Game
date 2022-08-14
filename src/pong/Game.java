@@ -56,9 +56,16 @@ public class Game extends Canvas implements Runnable, KeyListener {
         ball.tick(player, enemy, ball);
 
         if (player.getScore() == 5) {
-            Graphics g = layer.getGraphics();
+            BufferStrategy bs = this.getBufferStrategy();
+            if (bs == null) {
+                this.createBufferStrategy(3);
+                return;
+            }
+            Graphics g = bs.getDrawGraphics();
             g.setColor(Color.BLUE);
+            g.setFont(new Font("arial", Font.BOLD, 80));
             g.drawString("You Won!",190,100);
+            bs.show();
             stop();
         } else if (enemy.getScore() == 5) {
             BufferStrategy bs = this.getBufferStrategy();
@@ -66,9 +73,9 @@ public class Game extends Canvas implements Runnable, KeyListener {
                 this.createBufferStrategy(3);
                 return;
             }
-            Graphics g = layer.getGraphics();
-            g = bs.getDrawGraphics();
+            Graphics g = bs.getDrawGraphics();
             g.setColor(Color.RED);
+            g.setFont(new Font("arial", Font.BOLD, 80));
             g.drawString("You Lost!",190,100);
             bs.show();
             stop();

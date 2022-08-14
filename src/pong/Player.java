@@ -36,7 +36,7 @@ public class Player extends Rectangle{
         g.setColor(Color.BLUE);
         g.fillRect(x , y , width, height);
         g.setColor(Color.BLUE);
-        g.drawString("Score: "+score, 185,10);
+        g.drawString("Score: "+score, 5,10);
     }
 
     public void score() {
