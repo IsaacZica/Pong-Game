@@ -40,9 +40,9 @@ public class Game extends Canvas implements Runnable, KeyListener {
         JFrame frame = new JFrame("Pong");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(game);
         frame.add(game);
         frame.pack();
+        frame.setLocationRelativeTo(game);
         frame.setVisible(true);
 
         new Thread(game).start();
@@ -66,7 +66,6 @@ public class Game extends Canvas implements Runnable, KeyListener {
             g.setFont(new Font("arial", Font.BOLD, 80));
             g.drawString("You Won!",190,100);
             bs.show();
-            stop();
         } else if (enemy.getScore() == 5) {
             BufferStrategy bs = this.getBufferStrategy();
             if (bs == null) {
@@ -76,9 +75,8 @@ public class Game extends Canvas implements Runnable, KeyListener {
             Graphics g = bs.getDrawGraphics();
             g.setColor(Color.RED);
             g.setFont(new Font("arial", Font.BOLD, 80));
-            g.drawString("You Lost!",190,100);
+            g.drawString("You Lost!",Game.WIDTH/2-80,Game.HEIGHT/2-80);
             bs.show();
-            stop();
         }
 
     }

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8836a0-6d52-4a09-9555-851fa3184992" name="Changes" comment="Created player, added movement and collision">
+    <list default="true" id="4a8836a0-6d52-4a09-9555-851fa3184992" name="Changes" comment="Fixed ball velocity and Score system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pong/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pong/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pong/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pong/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pong/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pong.Game" />
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660423538060</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed ball velocity and Score system">
+      <created>1660484297849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660484297849</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +118,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Window created" />
     <MESSAGE value="Created player, added movement and collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created player, added movement and collision" />
+    <MESSAGE value="Fixed ball velocity and Score system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ball velocity and Score system" />
   </component>
 </project>

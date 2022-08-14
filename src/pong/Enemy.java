@@ -11,10 +11,10 @@ public class Enemy extends Rectangle{
 
     public void tick(Ball ball) {
         if (ball.y < this.y+20) {
-            this.y -= 0.80;
+            this.y -= 0.90;
         }
         if (ball.y > this.y+20) {
-            this.y += 0.80;
+            this.y += 0.90;
         }
         if (y + height > Game.HEIGHT) {
             y = Game.HEIGHT - height;
